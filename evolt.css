@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("\ult2.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: #fff;
+}
+
+/* Transparent Image Text */
+.transparent-text {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.transparent-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Side Navigation */
+.side-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+}
+.side-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    transition: background 0.3s;
+}
+.side-nav a:hover {
+    background: #ff4500;
+}
+
+/* About Section */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Updated Slideshow */
+.slideshow {
+    max-width: 80%;
+    margin: 50px auto;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+.slideshow img {
+    display: none;
+    animation: fade 3s ease-in-out infinite;
+    margin: auto;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.popup-content {
+    text-align: center;
+    color: #fff;
+}
+.popup img {
+    max-width: 50%;
+    margin-bottom: 20px;
+}
+.popup h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.popup.hidden {
+    display: none;
+}
+
+
+/* Responsive Login Form */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.form-container label {
+    font-size: 0.9rem;
+}
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4500;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background: #e03e00;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+    .form-container button {
+        font-size: 0.9rem;
+    }
+}
+/* Replace fixed widths */
+.form-container {
+    width: 80%; /* Use percentage instead of px */
+    padding: 2em; /* Use em for spacing */
+}
+
+
+
+/* Profile Card */
+.profile-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+}
+.profile-card img {
+    width: 100px;
+    border-radius: 50%;
+}
+.profile-card h3 {
+    margin: 10px 0;
+}
+.profile-card .social-icons a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Progress Bar */
+.progress-container {
+    background: #333;
+    border-radius: 20px;
+    height: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+.progress-bar {
+    background: #ff4500;
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.4s ease-in-out;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff4500;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #e03e00;
+}
+
+/* Collapsible Section */
+.collapsible {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-radius: 5px;
+}
+.collapsible:hover {
+    background: #444;
+}
+.content {
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce text size */
+    }
+    #popup img {
+        max-width: 90%; /* Shrink image on smaller screens */
+    }
+    .form-container {
+        width: 90%; /* Reduce form width */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    h1, h2 {
+        font-size: 1.5rem; /* Smaller headlines */
+    }
+    .side-nav {
+        font-size: 0.9rem; /* Adjust navigation size */
+    }
+}
